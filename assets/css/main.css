@@ -1392,15 +1392,15 @@ input, select, textarea {
     margin: 2rem 0;
 }
 
-		
+
 #project1-box {
-    background: url('../../images/cdc.png') no-repeat center center;
+    background: url('../../images/DMRAG.png') no-repeat center center;
     background-size: cover;
 }
 #project1-box::before {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: 0; 
     background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
     z-index: 1;
 }
@@ -1410,15 +1410,16 @@ input, select, textarea {
     z-index: 2;
 }
 
+
 #project2-box {
-    background: url('../../images/icb.png') no-repeat center center;
+    background: url('../../images/multibot.png') no-repeat center center;
     background-size: cover;
 }
 #project2-box::before {
     content: "";
     position: absolute;
     inset: 0; 
-    background: rgba(0, 0, 0, 0.7); /* semi-transparent dark overlay */
+    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
     z-index: 1;
 }
 #project2-box span {
@@ -1428,14 +1429,14 @@ input, select, textarea {
 }
 
 #project3-box {
-    background: url('../../images/imt.png') no-repeat center center;
+    background: url('../../images/c02.png') no-repeat center center;
     background-size: cover;
 }
 #project3-box::before {
     content: "";
     position: absolute;
     inset: 0; 
-    background: rgba(0, 0, 0, 0.7); /* semi-transparent dark overlay */
+    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
     z-index: 1;
 }
 #project3-box span {
@@ -1445,14 +1446,14 @@ input, select, textarea {
 }
 
 #project4-box {
-    background: url('../../images/spam.png') no-repeat center center;
+    background: url('../../images/mlpredict.png') no-repeat center center;
     background-size: cover;
 }
 #project4-box::before {
     content: "";
     position: absolute;
     inset: 0; 
-    background: rgba(0, 0, 0, 0.7); /* semi-transparent dark overlay */
+    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
     z-index: 1;
 }
 #project4-box span {
@@ -1462,17 +1463,85 @@ input, select, textarea {
 }
 
 #project5-box {
-    background: url('../../images/sentiment.png') no-repeat center center;
+    background: url('../../images/icb.png') no-repeat center center;
     background-size: cover;
 }
 #project5-box::before {
     content: "";
     position: absolute;
     inset: 0; 
-    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
+    background: rgba(0, 0, 0, 0.7); /* semi-transparent dark overlay */
     z-index: 1;
 }
 #project5-box span {
+    position: relative;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+#project6-box {
+    background: url('../../images/cdc.png') no-repeat center center;
+    background-size: cover;
+}
+#project6-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
+    z-index: 1;
+}
+#project6-box span {
+    position: relative;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+#project7-box {
+    background: url('../../images/imt.png') no-repeat center center;
+    background-size: cover;
+}
+#project7-box::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.7); /* semi-transparent dark overlay */
+    z-index: 1;
+}
+#project7-box span {
+    position: relative;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+#project8-box {
+    background: url('../../images/spam.png') no-repeat center center;
+    background-size: cover;
+}
+#project8-box::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.7); /* semi-transparent dark overlay */
+    z-index: 1;
+}
+#project8-box span {
+    position: relative;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+#project9-box {
+    background: url('../../images/sentiment.png') no-repeat center center;
+    background-size: cover;
+}
+#project9-box::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
+    z-index: 1;
+}
+#project9-box span {
     position: relative;
 	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     z-index: 2;
