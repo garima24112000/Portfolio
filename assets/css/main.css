@@ -1394,7 +1394,7 @@ input, select, textarea {
 
 
 #project1-box {
-    background: url('../../images/DMRAG.png') no-repeat center center;
+    background: url('../../images/multibot.png') no-repeat center center;
     background-size: cover;
 }
 #project1-box::before {
@@ -1412,7 +1412,7 @@ input, select, textarea {
 
 
 #project2-box {
-    background: url('../../images/multibot.png') no-repeat center center;
+    background: url('../../images/DMRAG.png') no-repeat center center;
     background-size: cover;
 }
 #project2-box::before {
