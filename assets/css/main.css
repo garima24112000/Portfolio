@@ -1078,23 +1078,28 @@ input, select, textarea {
 
 				#header nav ul li a {
 					display: block;
-					min-width: 7.5rem;
+					min-width: 8.5rem;
 					height: 2.75rem;
 					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
+					padding: 0 1.45rem 0 1.45rem;
 					text-transform: uppercase;
 					letter-spacing: 0.2rem;
 					font-size: 0.8rem;
 					border-bottom: 0;
 				}
 
-					#header nav ul li a:hover {
-						background-color: rgba(255, 255, 255, 0.075);
-					}
-
-					#header nav ul li a:active {
-						background-color: rgba(255, 255, 255, 0.175);
-					}
+				#header nav ul {
+					overflow: hidden;
+				}
+				
+				/* Move hover highlight to LI (respects dividers) */
+				#header nav ul li:hover {
+					background-color: rgba(255, 255, 255, 0.075);
+				}
+				
+				#header nav ul li:active {
+					background-color: rgba(255, 255, 255, 0.175);
+				}
 
 		#header nav.use-middle:after {
 			content: '';
@@ -1347,14 +1352,14 @@ input, select, textarea {
 #intro p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #e0e0e0;
+    color: #D1D5DB;
     margin-bottom: 1.5rem;
 }
 
 /* Highlight Keywords */
 #intro strong,
 #intro .highlight {
-    color: #66abd8;
+    color: #B7C9B3;
     font-weight: 600;
 }
 
@@ -1378,7 +1383,7 @@ input, select, textarea {
 }
 .skill-badges span {
     background-color: #202225;
-    border: 1px solid #66abd8;
+    border: 1px solid #B7C9B3;
     border-radius: 20px;
     padding: 0.4rem 1rem;
     font-size: 0.9rem;
@@ -1463,7 +1468,7 @@ input, select, textarea {
 }
 
 #project5-box {
-    background: url('../../images/icb.png') no-repeat center center;
+    background: url('../../images/imt.png') no-repeat center center;
     background-size: cover;
 }
 #project5-box::before {
@@ -1480,7 +1485,7 @@ input, select, textarea {
 }
 
 #project6-box {
-    background: url('../../images/cdc.png') no-repeat center center;
+    background: url('../../images/icb.png') no-repeat center center;
     background-size: cover;
 }
 #project6-box::before {
@@ -1497,7 +1502,7 @@ input, select, textarea {
 }
 
 #project7-box {
-    background: url('../../images/imt.png') no-repeat center center;
+    background: url('../../images/spam.png') no-repeat center center;
     background-size: cover;
 }
 #project7-box::before {
@@ -1514,7 +1519,7 @@ input, select, textarea {
 }
 
 #project8-box {
-    background: url('../../images/spam.png') no-repeat center center;
+    background: url('../../images/sentiment.png') no-repeat center center;
     background-size: cover;
 }
 #project8-box::before {
@@ -1531,7 +1536,7 @@ input, select, textarea {
 }
 
 #project9-box {
-    background: url('../../images/sentiment.png') no-repeat center center;
+    background: url('../../images/cdc.png') no-repeat center center;
     background-size: cover;
 }
 #project9-box::before {
@@ -1542,6 +1547,59 @@ input, select, textarea {
     z-index: 1;
 }
 #project9-box span {
+    position: relative;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+#project10-box {
+    background: url('../../images/netflix.png') no-repeat center center;
+    background-size: cover;
+}
+#project10-box::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
+    z-index: 1;
+}
+#project10-box span {
+    position: relative;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+#project11-box {
+    background: url('../../images/Scaling.png') no-repeat center center;
+    background-size: cover;
+}
+#project11-box::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
+    z-index: 1;
+}
+#project11-box span {
+    position: relative;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+/* Blogs */
+
+#projectb1-box {
+    background: url('../../images/GHC.png') no-repeat center center;
+    background-size: cover;
+}
+#projectb1-box::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
+    z-index: 1;
+}
+#projectb1-box span {
     position: relative;
 	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     z-index: 2;

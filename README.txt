@@ -20,7 +20,7 @@ Feel free to check it out here 👉 [garima24112000.github.io](https://garima241
   - Spam SMS Detector 📱
   - Sentiment Analysis 💬
   - Data Change Capture Utility 🔄
-- 📄 [Resume](https://shorturl.at/5DXMG) – For a deeper dive into my profile.
+- 📄 [Resume](https://drive.google.com/file/d/1R4kO76xzKS7vxLnxI9zJaqTmt8tEAA7h) – For a deeper dive into my profile.
 - 📬 Contact Info – Let's get in touch!
 
 ---
