@@ -1586,6 +1586,23 @@ input, select, textarea {
     z-index: 2;
 }
 
+#project12-box {
+    background: url('../../images/Aalekh.png') no-repeat center center;
+    background-size: cover;
+}
+#project12-box::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.735); /* semi-transparent dark overlay */
+    z-index: 1;
+}
+#project12-box span {
+    position: relative;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
 /* Blogs */
 
 #projectb1-box {
