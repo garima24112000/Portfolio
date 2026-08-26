@@ -1186,6 +1186,10 @@ body.is-preload #header .content .inner {
 	#header nav.use-middle:after {
 		display: none;
 	}
+
+	#intro .skill-badges {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
 }
 
 /* Main */
@@ -1315,12 +1319,15 @@ body.is-preload #header .content .inner {
 	margin-bottom: 1.5rem;
 }
 
-#intro strong,
-#intro .highlight {
-	color: #B7C9B3;
+#intro strong {
+	color: #F3F4F6;
 	font-weight: 600;
 }
 
+#intro .highlight {
+	color: #9AD7D5;
+	font-weight: 600;
+}
 /* Skill Badges */
 
 .skill-badges {
@@ -1333,7 +1340,7 @@ body.is-preload #header .content .inner {
 
 .skill-badges span {
 	background-color: #202225;
-	border: 1px solid #B7C9B3;
+	border: 1px solid #9AD7D5;
 	border-radius: 20px;
 	padding: 0.4rem 1rem;
 	font-size: 0.9rem;
