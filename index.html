@@ -482,18 +482,19 @@
 						</h3>
 
 						<p class="projects-subtext">
-							An active project shown separately from my completed work.
+							An active build with a working planning foundation, ongoing MVP
+							development, and a clearly defined future roadmap.
 						</p>
 
 						<div class="projects-grid building-grid">
-
-							<a
+							<button
+								type="button"
 								id="project14-box"
 								class="project-box featured ongoing-project"
-								href="https://github.com/garima24112000/TravelObligator"
-								target="_blank"
-								rel="noopener noreferrer"
-								aria-label="View the ongoing TravelObligator project on GitHub"
+								data-project="project14"
+								aria-label="View TravelObligator project progress"
+								aria-haspopup="dialog"
+								aria-controls="project14"
 							>
 								<span class="project-badges">
 									<span>Ongoing Project</span>
@@ -501,15 +502,14 @@
 								</span>
 
 								<span class="project-title">
-									TravelObligator — Travel Decision Engine
+									TravelObligator — Explainable Travel Decision Engine
 								</span>
 
 								<span class="project-action">
-									View ongoing project
+									View project progress
 									<span aria-hidden="true">&rarr;</span>
 								</span>
-							</a>
-
+							</button>
 						</div>
 					</section>
 
@@ -803,6 +803,97 @@
 					</details>
 
 				</article>
+
+				<!-- TravelObligator -->
+				<div id="project14" class="project-popup">
+					<div class="popup-content">
+						<span
+							class="close"
+							role="button"
+							tabindex="0"
+							aria-label="Close TravelObligator project details"
+						>
+							&times;
+						</span>
+
+						<h3>
+							TravelObligator — Explainable Travel Decision Engine
+						</h3>
+
+						<p>
+							<strong>Status: MVP in progress.</strong>
+							Building a provider-grounded platform that transforms traveler
+							preferences and constraints into explainable, validated single-city
+							plans.
+						</p>
+
+						<h4>Implemented</h4>
+
+						<ul>
+							<li>
+								Built a <strong>FastAPI and Next.js planning system</strong> for
+								preference-based daily plans, interactive maps, validation,
+								feedback, user locks, and version history.
+							</li>
+
+							<li>
+								Integrated <strong>OpenStreetMap, Open-Meteo, Nager.Date,
+								Frankfurter, and optional OSRM routing</strong> through cached
+								provider adapters with source transparency.
+							</li>
+
+							<li>
+								Added interest and must-visit matching, pace-aware planning,
+								proximity grouping, stay and restaurant guidance, route checks,
+								and travel-time buffers.
+							</li>
+						</ul>
+
+						<h4>Next for the MVP</h4>
+
+						<ul>
+							<li>
+								Activate guarded <strong>AI proposal & grounding
+								layer</strong> and implement feedback-driven partial regeneration.
+							</li>
+
+							<li>
+								Complete stay, transport, schedule, route, and cost
+								validation so plans can reach a reliable state.
+							</li>
+
+							<li>
+								Migrate plan storage to <strong>PostgreSQL</strong>, add
+								authentication, frontend tests, and production deployment.
+							</li>
+						</ul>
+
+						<h4>Future Scope</h4>
+
+						<p>
+							Multi-city planning, approved live booking integrations,
+							collaborative planning, disruption-aware replanning, personalization,
+							and mobile or offline itinerary access.
+						</p>
+
+						<p>
+							<strong>Core Stack:</strong>
+							Python | FastAPI | Next.js | TypeScript | Leaflet |
+							OpenStreetMap/Overpass | Open-Meteo | OSRM |
+							Anthropic/Groq (Shadow Mode) | Docker
+						</p>
+
+						<a
+							href="https://github.com/garima24112000/travelobligator"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							View on GitHub
+							<span aria-hidden="true">&rarr;</span>
+						</a>
+					</div>
+				</div>
+
 
 				<!-- Aalekh -->
 				<div id="project12" class="project-popup">

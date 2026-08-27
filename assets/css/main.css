@@ -1747,18 +1747,23 @@ body.is-preload #header .content .inner {
 #project14-box {
 	min-height: 230px;
 
-	background:
+	background-image:
 		radial-gradient(
 			circle at 78% 25%,
-			rgba(154, 215, 213, 0.45),
-			transparent 28%
+			rgba(154, 215, 213, 0.2),
+			transparent 35%
 		),
 		linear-gradient(
-			135deg,
-			#102936 0%,
-			#17232e 52%,
-			#203743 100%
-		);
+			90deg,
+			rgba(3, 14, 21, 0.92) 0%,
+			rgba(3, 14, 21, 0.7) 48%,
+			rgba(3, 14, 21, 0.35) 100%
+		),
+		url('../../images/travelobligator.png');
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #project14-box.ongoing-project {
@@ -1997,6 +2002,26 @@ body.modal-open {
 	width: 100%;
 }
 
+/* Compact TravelObligator project popup */
+#project14 .popup-content > p {
+	margin-bottom: 1rem;
+}
+
+#project14 .popup-content h4 {
+	margin: 1.1rem 0 0.55rem;
+}
+
+#project14 .popup-content ul {
+	margin: 0 0 1rem;
+}
+
+#project14 .popup-content li {
+	margin-bottom: 0.35rem;
+}
+
+#project14 .popup-content li:last-child {
+	margin-bottom: 0;
+}
 .contact-block p {
 	line-height: 1.5;
 	font-size: 18px;
