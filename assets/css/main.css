@@ -1361,11 +1361,19 @@ body.is-preload #header .content .inner {
 }
 
 #projects .major {
-	margin-bottom: 2.5rem;
+	margin-bottom: 1.25rem;
+}
+
+.projects-intro {
+	max-width: 50rem;
+	margin: 0 0 2.5rem;
+	color: rgba(255, 255, 255, 0.76);
+	font-size: 0.95rem;
+	line-height: 1.8;
 }
 
 .projects-section {
-	margin-bottom: 3.5rem;
+	margin-bottom: 3rem;
 }
 
 .projects-section:last-of-type {
@@ -1394,24 +1402,31 @@ body.is-preload #header .content .inner {
 
 .projects-grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(260px, 1fr));
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 1.5rem;
 	align-items: stretch;
 }
 
-/* Additional Projects: 3 boxes per row on desktop */
+/* Additional projects */
+
 .projects-grid.additional-grid {
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 1.25rem;
+	column-gap: 1.25rem;
+	row-gap: 1.25rem;
+	margin-top: 1.5rem;
 }
 
 .projects-grid.additional-grid .project-box {
-	min-height: 230px;
+	width: 100%;
+	min-width: 0;
+	min-height: 210px;
+	margin: 0;
 	padding: 1rem;
+	box-sizing: border-box;
 }
 
 .projects-grid.additional-grid .project-title {
-	font-size: 0.9rem;
+	font-size: 0.98rem;
 	line-height: 1.35;
 	max-width: 100%;
 }
@@ -1503,18 +1518,22 @@ body.is-preload #header .content .inner {
 }
 
 .project-title {
-	font-size: 1.45rem;
-	line-height: 1.35;
+	display: block;
+	width: 100%;
+	min-width: 0;
+	max-width: 100%;
+	font-size: clamp(1rem, 1.8vw, 1.35rem);
 	font-weight: 400;
-	letter-spacing: 0.02rem;
+	line-height: 1.35 !important;
+	letter-spacing: 0.01rem !important;
 	color: #ffffff;
 	text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
-	max-width: 92%;
-}
-
-#project1-box {
-	background: url('../../images/multibot.png') no-repeat center center;
-	background-size: cover;
+	text-align: left;
+	text-transform: none !important;
+	white-space: normal !important;
+	overflow-wrap: anywhere;
+	word-break: normal;
+	hyphens: auto;
 }
 
 #project2-box {
@@ -1635,25 +1654,227 @@ body.is-preload #header .content .inner {
 	white-space: normal;
 }
 
+/* Project card controls and interaction */
+
+#projects button.project-box,
+#projects a.project-box {
+	width: 100% !important;
+	max-width: 100%;
+	min-width: 0;
+	height: auto !important;
+	padding: 1.15rem;
+	border-radius: 0;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: normal !important;
+	letter-spacing: normal !important;
+	text-align: left !important;
+	text-transform: none !important;
+	white-space: normal !important;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+#projects a.project-box {
+	border-bottom: 0;
+}
+
+#projects .project-badges {
+	width: 100%;
+	line-height: 1;
+	text-align: left;
+}
+
+#projects .project-action {
+	display: inline-flex;
+	align-items: center;
+	align-self: flex-start;
+	gap: 0.4rem;
+
+	margin-top: 0.8rem;
+	color: #9ad7d5 !important;
+
+	font-size: 0.65rem;
+	font-weight: 600;
+	line-height: 1.4 !important;
+	letter-spacing: 0.1rem !important;
+	text-transform: uppercase !important;
+	white-space: nowrap !important;
+}
+
+#projects .project-action > span {
+	transition: transform 0.2s ease;
+}
+
+#projects .project-box:hover .project-action > span {
+	transform: translateX(4px);
+}
+
+#projects button.project-box:focus-visible,
+#projects a.project-box:focus-visible {
+	outline: 2px solid #9ad7d5;
+	outline-offset: 4px;
+}
+
+/* Featured projects: two flagship cards followed by three compact cards */
+
+#projects .featured-grid {
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+#projects .featured-grid .project-box {
+	grid-column: span 3;
+	min-height: 260px;
+}
+
+#projects .featured-grid .project-box:nth-child(n + 3) {
+	grid-column: span 2;
+	min-height: 215px;
+}
+
+#projects .featured-grid .project-box:nth-child(n + 3) .project-title {
+	font-size: 1.08rem;
+}
+
+/* TravelObligator card */
+
+#projects .building-grid {
+	grid-template-columns: 1fr;
+}
+
+#project14-box {
+	min-height: 230px;
+
+	background:
+		radial-gradient(
+			circle at 78% 25%,
+			rgba(154, 215, 213, 0.45),
+			transparent 28%
+		),
+		linear-gradient(
+			135deg,
+			#102936 0%,
+			#17232e 52%,
+			#203743 100%
+		);
+}
+
+#project14-box.ongoing-project {
+	border-color: rgba(154, 215, 213, 0.85);
+	box-shadow: inset 0 0 0 1px rgba(154, 215, 213, 0.18);
+}
+
+#project14-box .project-badges span:first-child {
+	border-color: #9ad7d5;
+	color: #9ad7d5;
+}
+
+/* Collapsible additional-project section */
+
+.more-projects {
+	margin-top: 1rem;
+}
+
+.more-projects summary {
+	position: relative;
+	padding: 1.1rem 3.5rem 1.1rem 1.25rem;
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	cursor: pointer;
+	list-style: none;
+	transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.more-projects summary::-webkit-details-marker {
+	display: none;
+}
+
+.more-projects summary:hover,
+.more-projects summary:focus-visible {
+	border-color: #9ad7d5;
+	background: rgba(154, 215, 213, 0.06);
+}
+
+.more-projects summary::after {
+	content: "+";
+	position: absolute;
+	right: 1.35rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #9ad7d5;
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.more-projects[open] summary::after {
+	content: "\2212";
+}
+
+.more-projects summary > span {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.35rem 0.75rem;
+}
+
+.more-projects summary strong,
+.more-projects summary small {
+	display: block;
+}
+
+.more-projects summary strong {
+	color: #ffffff;
+	font-size: 0.9rem;
+	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+}
+
+.more-projects summary small {
+	color: rgba(255, 255, 255, 0.62);
+	font-size: 0.78rem;
+	letter-spacing: 0.03rem;
+}
+
 body.modal-open {
 	overflow: hidden;
 }
-@media screen and (max-width: 980px) {
-	.featured-grid {
-		grid-template-columns: 1fr;
-	}
 
-	.additional-grid {
+/* Center the seventh additional-project card on desktop. */
+
+@media screen and (min-width: 981px) {
+	#projects .additional-grid > .project-box:last-child:nth-child(3n + 1) {
+		grid-column: 2;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	#projects .featured-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	.project-box {
-		min-height: 250px;
+	#projects .featured-grid .project-box,
+	#projects .featured-grid .project-box:nth-child(n + 3) {
+		grid-column: auto;
+		min-height: 225px;
 	}
 
-	.project-title {
-		font-size: 1.3rem;
-		max-width: 100%;
+	#projects .featured-grid .project-box:last-child {
+		grid-column: 1 / -1;
+	}
+
+	#projects .additional-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	#projects .additional-grid > .project-box:last-child:nth-child(2n + 1) {
+		grid-column: 1 / -1;
+		width: calc((100% - 1.25rem) / 2);
+		justify-self: center;
+	}
+
+	#projects .project-title {
+		font-size: 1.15rem;
 	}
 }
 
@@ -1662,28 +1883,50 @@ body.modal-open {
 		padding-right: 0;
 	}
 
+	.projects-intro {
+		margin-bottom: 2rem;
+		font-size: 0.9rem;
+	}
+
 	.projects-subtext {
 		font-size: 0.9rem;
 		line-height: 1.75;
 	}
 
-	.additional-grid {
+	#projects .featured-grid,
+	#projects .additional-grid,
+	#projects .building-grid {
 		grid-template-columns: 1fr;
 	}
 
-	.project-box {
-		min-height: 230px;
+	#projects .featured-grid .project-box,
+	#projects .featured-grid .project-box:nth-child(n + 3),
+	#projects .featured-grid .project-box:last-child,
+	#projects .additional-grid > .project-box,
+	#projects .additional-grid > .project-box:last-child:nth-child(2n + 1) {
+		grid-column: auto;
+		width: 100%;
+		min-height: 215px;
 		padding: 1rem;
 	}
 
-	.project-title {
-		font-size: 1.15rem;
-		line-height: 1.4;
+	#projects .project-title,
+	#projects .featured-grid .project-box:nth-child(n + 3) .project-title {
+		font-size: 1.05rem;
+		line-height: 1.4 !important;
 	}
 
-	.project-badges span {
+	#projects .project-badges span {
 		font-size: 0.54rem;
 		letter-spacing: 0.08rem;
+	}
+
+	#project14-box {
+		min-height: 210px;
+	}
+
+	.more-projects summary {
+		padding: 1rem 3rem 1rem 1rem;
 	}
 
 	.project-popup {
@@ -1707,12 +1950,20 @@ body.modal-open {
 		letter-spacing: 0.18rem;
 	}
 
-	.project-box {
-		min-height: 210px;
+	#projects .project-box {
+		min-height: 205px;
 	}
 
-	.project-title {
+	#projects .project-title {
 		font-size: 1.03rem;
+	}
+
+	.more-projects summary > span {
+		display: block;
+	}
+
+	.more-projects summary small {
+		margin-top: 0.3rem;
 	}
 }
 
