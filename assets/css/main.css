@@ -1668,28 +1668,8 @@ body.is-preload #header .content .inner {
 	background-size: cover;
 }
 
-#project5-box {
-	background: url('../../images/imt.png') no-repeat center center;
-	background-size: cover;
-}
-
 #project6-box {
 	background: url('../../images/icb.png') no-repeat center center;
-	background-size: cover;
-}
-
-#project7-box {
-	background: url('../../images/spam.png') no-repeat center center;
-	background-size: cover;
-}
-
-#project8-box {
-	background: url('../../images/sentiment.png') no-repeat center center;
-	background-size: cover;
-}
-
-#project9-box {
-	background: url('../../images/cdc.png') no-repeat center center;
 	background-size: cover;
 }
 
