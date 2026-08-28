@@ -2065,9 +2065,12 @@ body.modal-open {
 	}
 }
 
-#projectb1-box {
-	background: url('../../images/GHC.png') no-repeat center center;
+#projectb3-box {
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
+		url("../../images/InvisibleAI.png");
 	background-size: cover;
+	background-position: center;
 }
 
 #projectb2-box {
@@ -2076,6 +2079,11 @@ body.modal-open {
 		url("../../images/AIThroughAges.png");
 	background-size: cover;
 	background-position: center;
+}
+
+#projectb1-box {
+	background: url('../../images/GHC.png') no-repeat center center;
+	background-size: cover;
 }
 
 .blogs-grid {
