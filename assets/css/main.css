@@ -1693,6 +1693,11 @@ body.is-preload #header .content .inner {
 	background-size: cover;
 }
 
+#project15-box {
+	background: url('../../images/ops_copilot.png') no-repeat center top;
+	background-size: cover;
+}
+
 .project-popup {
 	display: none;
 	position: fixed;
@@ -1848,10 +1853,6 @@ body.is-preload #header .content .inner {
 		radial-gradient(circle at 78% 25%,
 			rgba(154, 215, 213, 0.2),
 			transparent 35%),
-		linear-gradient(90deg,
-			rgba(3, 14, 21, 0.92) 0%,
-			rgba(3, 14, 21, 0.7) 48%,
-			rgba(3, 14, 21, 0.35) 100%),
 		url('../../images/travelobligator.png');
 
 	background-position: center;
@@ -2084,6 +2085,16 @@ body.modal-open {
 #projectb1-box {
 	background: url('../../images/GHC.png') no-repeat center center;
 	background-size: cover;
+}
+
+/* Blogs - show artwork without dark overlay */
+#blogs .project-box::after {
+	display: none;
+}
+
+#blogs .project-box::before {
+	filter: none;
+	transform: none;
 }
 
 .blogs-grid {

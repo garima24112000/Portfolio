@@ -444,6 +444,22 @@
 
 					<div class="projects-grid featured-grid">
 
+						<button type="button" id="project15-box" class="project-box featured" data-project="project15"
+							aria-haspopup="dialog" aria-controls="project15">
+							<span class="project-badges">
+								<span>Personal</span>
+								<span>Agentic AI + Ops</span>
+							</span>
+
+							<span class="project-title">
+								Ops Copilot - Autonomous Incident Triage Agent
+							</span>
+
+							<span class="project-action">
+								View details <span aria-hidden="true">&rarr;</span>
+							</span>
+						</button>
+
 						<button type="button" id="project12-box" class="project-box featured" data-project="project12"
 							aria-haspopup="dialog" aria-controls="project12">
 							<span class="project-badges">
@@ -508,22 +524,6 @@
 							</span>
 						</button>
 
-						<button type="button" id="project2-box" class="project-box featured" data-project="project2"
-							aria-haspopup="dialog" aria-controls="project2">
-							<span class="project-badges">
-								<span>Academic</span>
-								<span>RAG + GenAI</span>
-							</span>
-
-							<span class="project-title">
-								Spartans - AI Dungeon Master
-							</span>
-
-							<span class="project-action">
-								View details <span aria-hidden="true">&rarr;</span>
-							</span>
-						</button>
-
 					</div>
 				</section>
 
@@ -540,6 +540,20 @@
 					</summary>
 
 					<div class="projects-grid additional-grid">
+
+						<button type="button" id="project2-box" class="project-box" data-project="project2"
+							aria-haspopup="dialog" aria-controls="project2">
+							<span class="project-badges">
+								<span>Academic</span>
+								<span>RAG + GenAI</span>
+							</span>
+							<span class="project-title">
+								Spartans - AI Dungeon Master
+							</span>
+							<span class="project-action">
+								View details <span aria-hidden="true">&rarr;</span>
+							</span>
+						</button>
 
 						<button type="button" id="project4-box" class="project-box" data-project="project4"
 							aria-haspopup="dialog" aria-controls="project4">
@@ -587,6 +601,70 @@
 				</details>
 
 			</article>
+
+			<!-- Ops Copilot -->
+			<div id="project15" class="project-popup">
+				<div class="popup-content">
+
+					<span class="close" role="button" tabindex="0"
+						aria-label="Close Ops Copilot project details">
+						&times;
+					</span>
+
+					<h3>
+						Ops Copilot — Autonomous Incident Triage Agent
+					</h3>
+
+					<p>
+						Built an <strong>autonomous IT incident-triage agent</strong> that
+						investigates service alerts by retrieving relevant runbooks, finding
+						similar past incidents, querying live telemetry, proposing remediation,
+						and recording postmortems while requiring
+						<strong>human approval before side-effecting actions</strong>.
+					</p>
+
+					<p>
+						Orchestrated a six-stage
+						<strong>LangGraph workflow</strong> across triage, grounding,
+						diagnosis, approval, action, and recording, backed by a standalone
+						<strong>FastMCP server</strong> exposing five operational tools.
+						Implemented hybrid <strong>BM25 + ELSER retrieval with reciprocal
+						rank fusion</strong> over Elasticsearch; evaluation across 147
+						alert-runbook pairs achieved <strong>0.791 nDCG@10</strong> at
+						<strong>19.7 ms p95 retrieval latency</strong>.
+					</p>
+
+					<p>
+						Developed a <strong>rate-limit-aware multi-provider LLM router</strong>
+						across Gemini, Groq, and local Ollama with disk caching, automatic
+						failover, and record/replay support for zero-live-call CI.
+						Instrumented LLM and tool execution with
+						<strong>OpenTelemetry and Elastic APM</strong>, added Kibana
+						observability dashboards, and enforced per-user retrieval access
+						through Elasticsearch document-level security.
+					</p>
+
+					<p>
+						<strong>Tech Stack:</strong>
+						Python | LangGraph | FastMCP | Elasticsearch | ELSER |
+						ES|QL | OpenTelemetry | Elastic APM | Kibana |
+						Gemini | Groq | Ollama | Docker
+					</p>
+
+					<p>
+						<strong>Project Type:</strong>
+						Personal AI Engineering Project
+					</p>
+
+					<p>
+						<a href="https://github.com/garima24112000/ops-copilot" target="_blank"
+							rel="noopener noreferrer">
+							View on GitHub
+						</a>
+					</p>
+
+				</div>
+			</div>
 
 			<!-- TravelObligator -->
 			<div id="project14" class="project-popup">
