@@ -438,8 +438,8 @@
 					</h3>
 
 					<p class="projects-subtext">
-						My strongest work across applied AI, agentic systems, retrieval,
-						data infrastructure, and machine learning.
+						My strongest work across applied AI, distributed systems, backend engineering,
+						agentic systems, retrieval infrastructure, and machine learning.
 					</p>
 
 					<div class="projects-grid featured-grid">
@@ -453,6 +453,22 @@
 
 							<span class="project-title">
 								Ops Copilot - Autonomous Incident Triage Agent
+							</span>
+
+							<span class="project-action">
+								View details <span aria-hidden="true">&rarr;</span>
+							</span>
+						</button>
+
+						<button type="button" id="project16-box" class="project-box featured" data-project="project16"
+							aria-haspopup="dialog" aria-controls="project16">
+							<span class="project-badges">
+								<span>Personal</span>
+								<span>Distributed Systems</span>
+							</span>
+
+							<span class="project-title">
+								LedgerLine - Distributed Payment & Ledger Platform
 							</span>
 
 							<span class="project-action">
@@ -658,6 +674,77 @@
 
 					<p>
 						<a href="https://github.com/garima24112000/ops-copilot" target="_blank"
+							rel="noopener noreferrer">
+							View on GitHub
+						</a>
+					</p>
+
+				</div>
+			</div>
+
+			<!-- LedgerLine -->
+			<div id="project16" class="project-popup">
+				<div class="popup-content">
+
+					<span class="close" role="button" tabindex="0"
+						aria-label="Close LedgerLine project details">
+						&times;
+					</span>
+
+					<h3>
+						LedgerLine — Distributed Payment & Ledger Platform
+					</h3>
+
+					<p>
+						Built a <strong>production-style payment gateway</strong> focused on
+						financial correctness, concurrency safety, and reliable event delivery.
+						Implemented a <strong>PostgreSQL-backed double-entry ledger</strong> with
+						database-enforced balance invariants, append-only journal entries,
+						idempotent payments, refunds through reversing entries, and reconciliation
+						for uncertain payment states.
+					</p>
+
+					<p>
+						Designed an event-driven architecture using a
+						<strong>transactional outbox and Kafka</strong> so ledger updates and
+						payment events commit atomically. Added <strong>HMAC-signed webhooks</strong>
+						with retry topics, dead-letter recovery, merchant isolation, and
+						<strong>Redis token-bucket rate limiting</strong> shared across service
+						replicas.
+					</p>
+
+					<p>
+						Containerized and deployed the system to
+						<strong>AWS EKS</strong> using Docker, Kubernetes, Helm, Terraform,
+						RDS PostgreSQL, Lambda, S3, ECR, and GitHub Actions with
+						<strong>OIDC-based AWS authentication</strong>. Added Prometheus and
+						Grafana observability together with k6 load testing and ledger audits
+						that verify financial correctness after every test run.
+					</p>
+
+					<p>
+						Load testing sustained approximately <strong>230 requests/second</strong>
+						locally before reaching a shared-ledger-row contention boundary.
+						Diagnosed the bottleneck through PostgreSQL lock inspection,
+						Grafana latency metrics, and connection-pool telemetry while the
+						ledger remained balanced with <strong>global net = 0</strong>.
+					</p>
+
+					<p>
+						<strong>Tech Stack:</strong>
+						Java 21 | Spring Boot | PostgreSQL | Kafka | Redis |
+						Docker | Kubernetes | Helm | AWS EKS | RDS | Lambda |
+						S3 | Terraform | GitHub Actions | Prometheus | Grafana | k6
+					</p>
+
+					<p>
+						<strong>Project Type:</strong>
+						Personal Backend / Distributed Systems Project
+					</p>
+
+					<p>
+						<a href="https://github.com/garima24112000/ledgerline"
+							target="_blank"
 							rel="noopener noreferrer">
 							View on GitHub
 						</a>

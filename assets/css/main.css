@@ -1698,6 +1698,11 @@ body.is-preload #header .content .inner {
 	background-size: cover;
 }
 
+#project16-box {
+	background: url('../../images/ledgerline.png') no-repeat center center;
+	background-size: cover;
+}
+
 .project-popup {
 	display: none;
 	position: fixed;
@@ -1832,7 +1837,7 @@ body.is-preload #header .content .inner {
 }
 
 #projects .featured-grid .project-box:nth-child(n + 3) {
-	grid-column: span 2;
+	grid-column: span 3;
 	min-height: 215px;
 }
 
@@ -1956,10 +1961,6 @@ body.modal-open {
 	#projects .featured-grid .project-box:nth-child(n + 3) {
 		grid-column: auto;
 		min-height: 225px;
-	}
-
-	#projects .featured-grid .project-box:last-child {
-		grid-column: 1 / -1;
 	}
 
 	#projects .additional-grid {
