@@ -283,7 +283,7 @@
 				var $this = $(this);
 
 				// Close.
-					$('<div class="close">Close</div>')
+					$('<button type="button" class="close" aria-label="Close panel">Close</button>')
 						.appendTo($this)
 						.on('click', function() {
 							location.hash = '';
@@ -310,6 +310,10 @@
 				switch (event.keyCode) {
 
 					case 27:
+
+						// Project popup open? It handles Escape on its own.
+							if ($('.project-popup.active').length > 0)
+								break;
 
 						// Article visible? Hide.
 							if ($body.hasClass('is-article-visible'))
@@ -390,24 +394,32 @@
 	// Custom Project Popup Logic
 		// Custom Project Popup Logic
 		var currentProjectScroll = 0;
+		var $projectPopupOpener = null;
 
-		function openProjectPopup(projectId) {
+		function openProjectPopup(projectId, $opener) {
 			var $popup = $('#' + projectId);
 			if (!$popup.length) return;
 
 			currentProjectScroll = $window.scrollTop();
+			$projectPopupOpener = $opener;
 
 			$('.project-popup').removeClass('active').hide();
 			$popup.show().addClass('active');
 
 			$body.addClass('modal-open');
 			$popup.find('.popup-content').scrollTop(0);
+			$popup.find('.close').trigger('focus');
 		}
 
 		function closeProjectPopup() {
 			$('.project-popup.active').removeClass('active').hide();
 			$body.removeClass('modal-open');
 			$window.scrollTop(currentProjectScroll);
+
+			if ($projectPopupOpener) {
+				$projectPopupOpener.trigger('focus');
+				$projectPopupOpener = null;
+			}
 		}
 
 		$('.project-box[data-project]').on('click', function(event) {
@@ -415,7 +427,7 @@
 			event.stopPropagation();
 
 			var projectId = $(this).data('project');
-			openProjectPopup(projectId);
+			openProjectPopup(projectId, $(this));
 		});
 
 		$('.project-popup .close').on('click', function(event) {
@@ -424,7 +436,26 @@
 			closeProjectPopup();
 		});
 
+		// Keep keyboard focus inside the open popup.
+		$('.project-popup').on('keydown', function(event) {
+			if (event.key !== 'Tab') return;
+
+			var $focusable = $(this).find('.close, a[href]');
+			var first = $focusable.get(0);
+			var last = $focusable.get($focusable.length - 1);
+
+			if (event.shiftKey && document.activeElement === first) {
+				event.preventDefault();
+				last.focus();
+			} else if (!event.shiftKey && document.activeElement === last) {
+				event.preventDefault();
+				first.focus();
+			}
+		});
+
 		$('.project-popup').on('click', function(event) {
+			event.stopPropagation();
+
 			if ($(event.target).is('.project-popup')) {
 				closeProjectPopup();
 			}

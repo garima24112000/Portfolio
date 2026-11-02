@@ -1,34 +1,29 @@
-# 💻 Garima Prachi ~ Portfolio
+# Garima Prachi | Portfolio
 
-Welcome to my personal portfolio website, hosted using **GitHub Pages**!
+Personal portfolio of Garima Prachi, an AI and software engineer with an M.S. in Data Science from
+Stony Brook University. Hosted with GitHub Pages:
 
-## 🌟 About Me
+https://garima24112000.github.io/Portfolio/
 
-I’m Garima Prachi, a passionate and driven **Data Science graduate student at SUNY Stony Brook University, with a strong foundation in Computer Science, Machine Learning, and Full-Stack Development. With hands-on experience at **Razorpay**, and a curious, creative mind, I love solving real-world problems through technology.
+## What you'll find
 
-Feel free to check it out here 👉 [garima24112000.github.io](https://garima24112000.github.io)
+- About: background and how I approach engineering work
+- Experience: AI, backend, analytics, and research data work
+- Projects: agentic AI, RAG and retrieval, distributed systems, and machine learning, including
+  TravelObligator, Ops Copilot, LedgerLine, Aalekh, and Diagnostic Copilot
+- Skills: technologies grouped by area, with where each group was used
+- Writing: articles on Medium
+- Contact: email, LinkedIn, and GitHub
 
----
+## Running locally
 
-## 🚀 What You’ll Find
+The site is static HTML, CSS, and JavaScript with no build step:
 
-- 👩‍💼 Introduction – A snapshot of who I am, my journey, and what drives me.
-- 🧠 Experience – My internship at Razorpay and the tech I’ve worked with.
-- 🛠️ Projects – Showcasing ML, NLP, and full-stack development work:
-  - Image Caption Bot 🤖🖼️
-  - Invoice Management Tool 📄
-  - Spam SMS Detector 📱
-  - Sentiment Analysis 💬
-  - Data Change Capture Utility 🔄
-- 📄 [Resume](https://drive.google.com/file/d/1R4kO76xzKS7vxLnxI9zJaqTmt8tEAA7h) – For a deeper dive into my profile.
-- 📬 Contact Info – Let's get in touch!
+    python3 -m http.server 8000
 
----
+Then open http://localhost:8000.
 
-## 📫 Connect with Me
+## Contact
 
-- 📧 [garimaprachi2411@gmail.com](mailto:garimaprachi2411@gmail.com)
-- 🔗 [LinkedIn](https://www.linkedin.com/in/garimaprachi)
-
----
-
+- garimaprachi2411@gmail.com
+- https://www.linkedin.com/in/garimaprachi
